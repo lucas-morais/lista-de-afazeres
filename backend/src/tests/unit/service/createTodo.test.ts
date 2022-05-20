@@ -4,6 +4,7 @@ import { PrismaClient, Todo } from '@prisma/client';
 
 import todosMock from '../../mocks';
 import TodoModel from '../../../model/TodoModel';
+import TodoService from '../../../service/TodoService';
 import { ICreateTodo } from '../../../interfaces';
 
 const client = new PrismaClient();
@@ -11,8 +12,9 @@ const client = new PrismaClient();
 const { expect } = chai;
 
 const todoModel = new TodoModel(client);
+const todoService = new TodoService(todoModel);
 
-describe('Testa camada de modelo de criação de um afazer', () => {
+describe('Testa camada de serviço de criação de um afazer', () => {
   let stub: sinon.SinonStub;
   let todo: Todo;
   const newTodo:ICreateTodo = {
@@ -20,11 +22,10 @@ describe('Testa camada de modelo de criação de um afazer', () => {
     description: 'Segunda tarefa',
     status: 'ANDAMENTO',
   };
-  before(async () => {
-    
-    stub = sinon.stub(client.todo, 'create');
+  before(async () => { 
+    stub = sinon.stub(todoModel, 'createTodo');
     stub.resolves(todosMock[0]);
-    todo = await todoModel.createTodo(newTodo);
+    todo = await todoService.createTodo(newTodo);
   });
   after(async () => {
     stub.reset();
