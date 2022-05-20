@@ -13,10 +13,9 @@ export default class App {
     this.app.use(express.json());
   }
 
-
   public start(port: string | number) {
     this.app.listen(Number(port), () => {
       console.log(`app rodando na porta ${port}`);
-    })
+    });
   }
 }

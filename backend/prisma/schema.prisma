@@ -6,6 +6,22 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Todo {
+  id  String  @id
+  title String
+  description String @db.Text
+  status Status
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("todos")
+}
+
+enum Status {
+  PENDENTE
+  ANDAMENTO
+  PRONTA
 }
