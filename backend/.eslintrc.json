@@ -16,6 +16,12 @@
     ],
     "rules": {
         "import/extensions": 0,
-        "import/no-unresolved": 0
-    }
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "no-useless-constructor": 0,
+        "no-unused-vars": 0,
+        "no-empty-function": 0,
+        "no-underscore-dangle": 0
+    },
+    "ignorePatterns": ["**/*.test.ts"] 
 }
