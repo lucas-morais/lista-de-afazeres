@@ -1,5 +1,5 @@
 import { PrismaClient, Todo } from '@prisma/client';
-import ICreateTodo from '../interfaces/ICreateTodo';
+import { ICreateTodo } from '../interfaces';
 
 export default class TodoModel {
   constructor(private client: PrismaClient) {
