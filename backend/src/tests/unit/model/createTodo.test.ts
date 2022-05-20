@@ -8,7 +8,7 @@ const { expect } = chai;
 
 describe('Testa camada de modelo de criação de um afazer', () => {
   before(() => {
-    sinon.stub(todo, 'create');
+    sinon.stub(todo, 'create').resolves(1);
   })
   it('deve retornar vazio', () => {
     expect(1).to.be.equals(1);
