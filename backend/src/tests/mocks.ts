@@ -2,7 +2,7 @@ import { Todo } from '@prisma/client';
 
 const todos: Todo[] = [
   {
-    id: '1212',
+    id: 1,
     title: 'Minha tarefa',
     description: 'Primeira tarefa',
     status: 'PENDENTE',
@@ -10,7 +10,7 @@ const todos: Todo[] = [
     updatedAt: new Date('2022-05-20T12:40:42.476Z'),
   },
   {
-    id: '1234',
+    id: 2,
     title: 'Limpar casa',
     description: 'Segunda tarefa',
     status: 'ANDAMENTO',
@@ -18,7 +18,7 @@ const todos: Todo[] = [
     updatedAt: new Date('2022-05-20T12:43:31.355Z'),
   },
   {
-    id: '1555',
+    id: 3,
     title: 'Estudar mongoDB',
     description: 'Estudar conteúdo da Trybe',
     status: 'PRONTA',
@@ -26,3 +26,5 @@ const todos: Todo[] = [
     updatedAt: new Date('2022-05-20T12:44:49.029Z'),
   },
 ];
+
+export default todos;
