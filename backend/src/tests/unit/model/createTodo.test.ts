@@ -1,16 +1,16 @@
-import * as chai from 'chai';
-import * as sinon from 'sinon';
-import { PrismaClient } from '@prisma/client';
+// import * as chai from 'chai';
+// import * as sinon from 'sinon';
+// import { PrismaClient } from '@prisma/client';
 
-const { todo } = new PrismaClient();
+// const { todo } = new PrismaClient();
 
-const { expect } = chai;
+// const { expect } = chai;
 
-describe('Testa camada de modelo de criação de um afazer', () => {
-  before(() => {
-    sinon.stub(todo, 'create').resolves(1);
-  })
-  it('deve retornar vazio', () => {
-    expect(1).to.be.equals(1);
-  });
-});
+// describe('Testa camada de modelo de criação de um afazer', () => {
+//   before(() => {
+//     sinon.stub(todo, 'create').resolves(1);
+//   })
+//   it('deve retornar vazio', () => {
+//     expect(1).to.be.equals(1);
+//   });
+// });

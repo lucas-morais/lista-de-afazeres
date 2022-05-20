@@ -2,7 +2,7 @@ import { NextFunction, Response, Request } from 'express';
 import { ICreateTodo } from '../interfaces';
 import TodoService from '../service/TodoService';
 
-export default class todoController {
+export default class TodoController {
   constructor(private service: TodoService) {
 
   }
